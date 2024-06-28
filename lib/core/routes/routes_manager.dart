@@ -1,7 +1,4 @@
-import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/src/home/presentation/views/home_view.dart';
-import 'package:ptc_quiz2/src/onboarding/presentation/views/onboarding_view.dart';
-
+part of '../utils/imports_manager.dart';
 enum AppRoutes {
   onboarding,
   home,
@@ -27,7 +24,7 @@ abstract final class RoutesManager {
       GoRoute(
         path: '/',
         name: AppRoutes.onboarding.name,
-        builder: (context, state) => const OnboardingView(),
+        builder: (context, state) => const BottomNavBarView(),
         routes: routes.entries
             .map(
               (entry) => GoRoute(

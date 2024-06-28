@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-
+part of '../utils/imports_manager.dart';
 abstract final class ColorsManager {
   ColorsManager._();
   //
@@ -13,7 +12,7 @@ abstract final class ColorsManager {
   static const blueGrayLight = Color(0xff606D76);
   static const greyDark = Color(0xeeA9B4BC);
   static const grey = Color(0xffC5CDD2);
-  static const grayLight = Color(0xffE7ECF0);
+  static const greyLight = Color(0xffE7ECF0);
   static const white = Color(0xffF8F9FB);
   static const black = Color(0xff1E222B);
   //

@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/core/routes/routes_manager.dart';
-
-import '../../../../../core/colors/colors_manager.dart';
-import '../../../../../core/constants/sizes_manager.dart';
-import '../../../../../core/constants/strings_manager.dart';
-import '../../../../../core/styles/text_styles_manager.dart';
+import '../../../../../core/utils/imports_manager.dart';
 
 class OnboardingButton extends StatelessWidget {
   const OnboardingButton({
@@ -20,7 +15,7 @@ class OnboardingButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         if (isLastPage) {
-          GoRouter.of(context).goNamed(AppRoutes.home.name);
+          GoRouter.of(context).pushReplacementNamed(AppRoutes.home.name);
         } else {
           pageController.nextPage(
             duration: const Duration(milliseconds: 500),
@@ -35,7 +30,7 @@ class OnboardingButton extends StatelessWidget {
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            20,
+            SizesManager.r20,
           ),
         ),
         fixedSize: const Size.fromWidth(260),

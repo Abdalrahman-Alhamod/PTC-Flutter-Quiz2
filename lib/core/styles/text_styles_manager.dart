@@ -1,8 +1,5 @@
 // ignore_for_file: constant_identifier_names
-
-import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/styles/font_sizes_manager.dart';
-import 'package:ptc_quiz2/core/styles/font_weight_manager.dart';
+part of '../utils/imports_manager.dart';
 
 abstract final class TextStylesManager {
   TextStylesManager._();

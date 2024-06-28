@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:ptc_quiz2/core/helpers/convert_to_material_color.dart';
+import 'package:ptc_quiz2/src/home/presentation/views/bottom_nav_bar_view.dart';
+import '../../src/home/presentation/views/home_view.dart';
+part '../assets/fonts_manager.dart';
+part '../assets/images_manager.dart';
+part '../assets/svgs_manager.dart';
+part '../colors/colors_manager.dart';
+part '../constants/sizes_manager.dart';
+part '../constants/strings_manager.dart';
+part '../routes/routes_manager.dart';
+part '../styles/font_sizes_manager.dart';
+part '../styles/font_weight_manager.dart';
+part '../styles/text_styles_manager.dart';
+part '../theme/theme_manager.dart';

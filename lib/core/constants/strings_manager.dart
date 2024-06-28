@@ -1,3 +1,5 @@
+part of '../utils/imports_manager.dart';
+
 abstract final class StringsManager {
   StringsManager._();
   static const appName = 'PTC Quiz 2';
@@ -29,8 +31,8 @@ abstract final class StringsManager {
   static const hrs = 'HRS';
   static const yourTimeSaved = 'Your time saved';
   static const dealsOnFruitsTea = 'Deals on Fruits & Tea';
-  static const orangePackage = 'Orange Package';
-  static const greenTeaPackage = 'Green Tea Package';
+  static const orangePackage = 'Orange Package 1';
+  static const greenTeaPackage = 'Green Tea Package 1';
   static const bundle = 'bundle';
 
   // Categories

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/constants/strings_manager.dart';
-import 'package:ptc_quiz2/core/routes/routes_manager.dart';
-import 'package:ptc_quiz2/core/theme/theme_manager.dart';
+import '../core/utils/imports_manager.dart';
 
 class PTCQuiz2 extends StatelessWidget {
   const PTCQuiz2({super.key});

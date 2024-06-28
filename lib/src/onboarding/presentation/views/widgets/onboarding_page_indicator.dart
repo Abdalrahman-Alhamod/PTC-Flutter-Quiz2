@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/colors/colors_manager.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../../../core/utils/imports_manager.dart';
 
 class OnboardingPageIndicator extends StatelessWidget {
   const OnboardingPageIndicator({

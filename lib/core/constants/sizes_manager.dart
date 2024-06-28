@@ -1,3 +1,5 @@
+part of '../utils/imports_manager.dart';
+
 abstract final class SizesManager {
   SizesManager._();
   // Margin
@@ -19,6 +21,7 @@ abstract final class SizesManager {
   static const double m36 = 36.0;
   static const double m38 = 38.0;
   static const double m40 = 40.0;
+  static const double m50 = 50.0;
   // Padding
   static const double p2 = 2.0;
   static const double p4 = 4.0;
@@ -32,7 +35,9 @@ abstract final class SizesManager {
   static const double p20 = 20.0;
   static const double p24 = 24.0;
   static const double p25 = 25.0;
+  static const double p28 = 28.0;
   static const double p30 = 30.0;
+  static const double p32 = 32.0;
   static const double p35 = 35.0;
   static const double p40 = 40.0;
   static const double p48 = 48.0;
@@ -65,4 +70,25 @@ abstract final class SizesManager {
   static const double s70 = 70.0;
   static const double s80 = 80.0;
   static const double s100 = 100.0;
+
+  // Radius
+  static const double r4 = 4.0;
+  static const double r6 = 6.0;
+  static const double r8 = 8.0;
+  static const double r10 = 10.0;
+  static const double r12 = 12.0;
+  static const double r14 = 14.0;
+  static const double r16 = 16.0;
+  static const double r18 = 18.0;
+  static const double r20 = 20.0;
+  static const double r24 = 24.0;
+  static const double r26 = 26.0;
+  static const double r28 = 28.0;
+  static const double r30 = 30.0;
+  static const double r32 = 32.0;
+  static const double r34 = 34.0;
+  static const double r36 = 36.0;
+  static const double r38 = 38.0;
+  static const double r40 = 40.0;
+  static const double r50 = 50.0;
 }

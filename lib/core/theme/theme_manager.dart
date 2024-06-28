@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/assets/fonts_manager.dart';
-import 'package:ptc_quiz2/core/colors/colors_manager.dart';
-import 'package:ptc_quiz2/core/helpers/convert_to_material_color.dart';
+part of '../utils/imports_manager.dart';
 
 abstract final class ThemeManager {
   ThemeManager._();

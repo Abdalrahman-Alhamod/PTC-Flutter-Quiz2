@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/assets/images_manager.dart';
-import 'package:ptc_quiz2/core/colors/colors_manager.dart';
-import 'package:ptc_quiz2/core/constants/sizes_manager.dart';
-import 'package:ptc_quiz2/core/constants/strings_manager.dart';
-import 'package:ptc_quiz2/core/styles/text_styles_manager.dart';
-
+import '../../../../core/utils/imports_manager.dart';
 import 'widgets/onboarding_button.dart';
 import 'widgets/onboarding_image.dart';
 import 'widgets/onboarding_page_indicator.dart';

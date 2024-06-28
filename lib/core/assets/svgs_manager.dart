@@ -1,3 +1,4 @@
+part of '../utils/imports_manager.dart';
 abstract final class SVGsManager {
    SVGsManager._();
   static const mainPath = 'assets/svgs';

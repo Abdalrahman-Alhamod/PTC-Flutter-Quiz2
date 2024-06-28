@@ -1,3 +1,4 @@
+part of '../utils/imports_manager.dart';
 abstract final class FontSizeManager {
   FontSizeManager._();
   static const double s12 = 12.0;
