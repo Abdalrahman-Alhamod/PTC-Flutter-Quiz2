@@ -1,8 +1,8 @@
 part of '../utils/imports_manager.dart';
+
 enum AppRoutes {
   onboarding,
-  home,
-  categories,
+  bottomBar,
   products,
   productsDetails,
   shoppingCart,
@@ -12,7 +12,7 @@ enum AppRoutes {
 }
 
 final Map<AppRoutes, dynamic> routes = {
-  AppRoutes.home: (context, state) => const HomeView(),
+  AppRoutes.bottomBar: (context, state) => const BottomNavBarView(),
 };
 
 abstract final class RoutesManager {
@@ -24,7 +24,7 @@ abstract final class RoutesManager {
       GoRoute(
         path: '/',
         name: AppRoutes.onboarding.name,
-        builder: (context, state) => const BottomNavBarView(),
+        builder: (context, state) => const OnboardingView(),
         routes: routes.entries
             .map(
               (entry) => GoRoute(

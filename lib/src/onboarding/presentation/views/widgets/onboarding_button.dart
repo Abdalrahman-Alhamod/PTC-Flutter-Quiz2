@@ -15,7 +15,7 @@ class OnboardingButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         if (isLastPage) {
-          GoRouter.of(context).pushReplacementNamed(AppRoutes.home.name);
+          GoRouter.of(context).pushReplacementNamed(AppRoutes.bottomBar.name);
         } else {
           pageController.nextPage(
             duration: const Duration(milliseconds: 500),
