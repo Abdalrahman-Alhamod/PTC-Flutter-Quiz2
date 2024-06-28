@@ -15,4 +15,7 @@ abstract final class ColorsManager {
   static const grey = Color(0xffC5CDD2);
   static const grayLight = Color(0xffE7ECF0);
   static const white = Color(0xffF8F9FB);
+  static const black = Color(0xff1E222B);
+  //
+  static const textColor = Color(0xffB2BBCE);
 }

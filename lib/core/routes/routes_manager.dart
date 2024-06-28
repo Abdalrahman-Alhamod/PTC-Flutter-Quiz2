@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/src/splash/views/splash_view.dart';
+import 'package:ptc_quiz2/src/home/presentation/views/home_view.dart';
+import 'package:ptc_quiz2/src/onboarding/presentation/views/onboarding_view.dart';
 
 enum AppRoutes {
-  splash,
   onboarding,
   home,
   categories,
@@ -15,7 +15,7 @@ enum AppRoutes {
 }
 
 final Map<AppRoutes, dynamic> routes = {
-  // AppRoutes.splash: (context, state) => const SplashView(),
+  AppRoutes.home: (context, state) => const HomeView(),
 };
 
 abstract final class RoutesManager {
@@ -26,8 +26,8 @@ abstract final class RoutesManager {
     routes: [
       GoRoute(
         path: '/',
-        name: AppRoutes.splash.name,
-        builder: (context, state) => const SplashView(),
+        name: AppRoutes.onboarding.name,
+        builder: (context, state) => const OnboardingView(),
         routes: routes.entries
             .map(
               (entry) => GoRoute(
