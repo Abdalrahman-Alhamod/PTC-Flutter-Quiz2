@@ -105,7 +105,7 @@ class HomeBriefBox extends StatelessWidget {
       margin: isLast
           ? const EdgeInsets.only(left: SizesManager.m20)
           : const EdgeInsets.symmetric(horizontal: SizesManager.m20),
-      width: 160,
+      width: 180,
       decoration: BoxDecoration(
         color: isCurrent ? ColorsManager.secondary : ColorsManager.grey,
         borderRadius: BorderRadius.circular(

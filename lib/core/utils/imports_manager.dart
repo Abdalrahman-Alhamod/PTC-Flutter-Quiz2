@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/core/helpers/convert_to_material_color.dart';
-import 'package:ptc_quiz2/src/home/presentation/views/bottom_nav_bar_view.dart';
-import 'package:ptc_quiz2/src/onboarding/presentation/views/onboarding_view.dart';
+import '../helpers/convert_to_material_color.dart';
+import '../../src/home/presentation/views/bottom_nav_bar_view.dart';
+import '../../src/onboarding/presentation/views/onboarding_view.dart';
 part '../assets/fonts_manager.dart';
 part '../assets/images_manager.dart';
 part '../assets/svgs_manager.dart';

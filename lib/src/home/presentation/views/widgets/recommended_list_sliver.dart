@@ -53,7 +53,7 @@ class RecommendedListSliver extends StatelessWidget {
                     ),
                     const Divider(
                       color: ColorsManager.greyDark,
-                      height: SizesManager.s1_5,
+                      height: 0.5,
                       thickness: 0.5,
                     ),
                     const Text(

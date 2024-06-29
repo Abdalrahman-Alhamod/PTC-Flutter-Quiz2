@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
-import 'custom_search_bar.dart';
-import 'sliver_app_bar_sub_widget.dart';
 
-class HomeSliverAppBar extends StatelessWidget {
-  const HomeSliverAppBar({
+class CategoriesSliverAppBar extends StatelessWidget {
+  const CategoriesSliverAppBar({
     super.key,
   });
 
@@ -24,15 +22,27 @@ class HomeSliverAppBar extends StatelessWidget {
             SizesManager.m12,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     StringsManager.homeHello,
                     style: TextStylesManager.H3_Semibold_20px.copyWith(
                       color: ColorsManager.white,
                     ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      SVGsManager.search,
+                      width: SizesManager.s24,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: SizesManager.m32,
                   ),
                   IconButton(
                     onPressed: () {},
@@ -48,23 +58,24 @@ class HomeSliverAppBar extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: SizesManager.s36,
+                height: SizesManager.s12,
               ),
-              const CustomSearchBar(),
-              const Spacer(),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SliverAppBarSubWidget(
-                    title: StringsManager.deliveryTo,
-                    content: StringsManager.deliveryToAddresss,
-                  ),
-                  SliverAppBarSubWidget(
-                    title: StringsManager.within,
-                    content: StringsManager.withinTime,
-                  ),
-                ],
-              )
+              const Text(
+                StringsManager.shop,
+                style: TextStyle(
+                  fontSize: SizesManager.s50,
+                  fontWeight: FontWeightManager.light,
+                  color: ColorsManager.white,
+                ),
+              ),
+              const Text(
+                StringsManager.byCategory,
+                style: TextStyle(
+                  fontSize: SizesManager.s50,
+                  fontWeight: FontWeightManager.extraBold,
+                  color: ColorsManager.white,
+                ),
+              ),
             ],
           ),
         ),

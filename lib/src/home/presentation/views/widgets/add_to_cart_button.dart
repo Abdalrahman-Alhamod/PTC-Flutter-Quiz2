@@ -9,19 +9,23 @@ class AddToCartButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      style: IconButton.styleFrom(
-        backgroundColor: ColorsManager.primary,
-      ),
-      constraints: const BoxConstraints(
-        minHeight: SizesManager.s24,
-        minWidth: SizesManager.s24,
-      ),
-      iconSize: SizesManager.s12,
-      icon: const Icon(
-        Icons.add,
-        color: ColorsManager.white,
+    return SizedBox.square(
+      dimension: SizesManager.s24,
+      child: IconButton(
+        onPressed: () {},
+        style: IconButton.styleFrom(
+          backgroundColor: ColorsManager.primary,
+        ),
+        constraints: const BoxConstraints(
+          minHeight: SizesManager.s24,
+          minWidth: SizesManager.s24,
+        ),
+        padding: EdgeInsets.zero,
+        iconSize: SizesManager.s12,
+        icon: const Icon(
+          Icons.add,
+          color: ColorsManager.white,
+        ),
       ),
     );
   }

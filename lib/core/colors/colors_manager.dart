@@ -1,4 +1,5 @@
 part of '../utils/imports_manager.dart';
+
 abstract final class ColorsManager {
   ColorsManager._();
   //
@@ -9,7 +10,7 @@ abstract final class ColorsManager {
   //
   static const blueGreyDark = Color(0xff1B262E);
   static const blueGrey = Color(0xff354349);
-  static const blueGrayLight = Color(0xff606D76);
+  static const blueGreyLight = Color(0xff606D76);
   static const greyDark = Color(0xeeA9B4BC);
   static const grey = Color(0xffC5CDD2);
   static const greyLight = Color(0xffE7ECF0);
@@ -17,4 +18,5 @@ abstract final class ColorsManager {
   static const black = Color(0xff1E222B);
   //
   static const textColor = Color(0xffB2BBCE);
+  static const pink = Color(0xffFFC3BB);
 }

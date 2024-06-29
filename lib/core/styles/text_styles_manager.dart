@@ -77,6 +77,10 @@ abstract final class TextStylesManager {
   );
 
   ///   Body 1
+  static const Body1_Bold_16px = TextStyle(
+    fontSize: FontSizeManager.s16,
+    fontWeight: FontWeightManager.bold,
+  );
   static const Body1_Semibold_16px = TextStyle(
     fontSize: FontSizeManager.s16,
     fontWeight: FontWeightManager.semiBold,

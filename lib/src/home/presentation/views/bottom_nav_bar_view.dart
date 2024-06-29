@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:ptc_quiz2/core/utils/imports_manager.dart';
-import 'package:ptc_quiz2/src/home/presentation/views/home_view.dart';
+import '../../../../core/utils/imports_manager.dart';
+import '../../../categories/presentation/views/categories_view.dart';
+import 'home_view.dart';
 
 class BottomNavBarView extends StatefulWidget {
   const BottomNavBarView({super.key});
@@ -15,8 +16,15 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
   late int _bottomNavIndex;
   late List<String> _icons;
   late List<String> _activeIcons;
+  late List<Widget> _pages;
   @override
   void initState() {
+    _pages = const [
+      HomeView(),
+      CategoriesView(),
+      HomeView(),
+      HomeView(),
+    ];
     _icons = [
       ImagesManager.home,
       ImagesManager.categories,
@@ -44,13 +52,9 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
-        children: const [
-          HomeView(),
-          HomeView(),
-          HomeView(),
-          HomeView(),
-        ],
+        children: _pages,
       ),
       bottomNavigationBar: AnimatedBottomNavigationBar.builder(
         height: SizesManager.s80,
@@ -62,10 +66,8 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
         rightCornerRadius: 32,
         onTap: (index) => setState(() {
           _bottomNavIndex = index;
-          _pageController.animateToPage(
+          _pageController.jumpToPage(
             index,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut,
           );
         }),
         backgroundColor: ColorsManager.greyLight,

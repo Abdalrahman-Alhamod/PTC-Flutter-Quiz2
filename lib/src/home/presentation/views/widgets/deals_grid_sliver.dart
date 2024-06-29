@@ -103,7 +103,7 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
               Text(
                 '${_product[index].name} | ${_product[index].quantity} ${StringsManager.bundle}',
                 style: TextStylesManager.Label_Regular_12px.copyWith(
-                  color: ColorsManager.blueGrayLight,
+                  color: ColorsManager.blueGreyLight,
                 ),
               ),
             ],
