@@ -14,6 +14,7 @@ enum AppRoutes {
 final Map<AppRoutes, dynamic> routes = {
   AppRoutes.bottomBar: (context, state) => const BottomNavBarView(),
   AppRoutes.products: (context, state) => const ProductsView(),
+  AppRoutes.productsDetails: (context, state) => const ProductDetailsView(),
 };
 
 abstract final class RoutesManager {

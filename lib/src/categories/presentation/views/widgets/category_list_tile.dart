@@ -72,11 +72,15 @@ class CategoryListTile extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: '\$${product.price}',
-                          style: TextStylesManager.Body1_Bold_16px,
+                          style: TextStylesManager.Body1_Bold_16px.copyWith(
+                            color: ColorsManager.primary,
+                          ),
                         ),
-                        const TextSpan(
+                        TextSpan(
                           text: '/${StringsManager.kG}',
-                          style: TextStylesManager.Body1_Regular_16px,
+                          style: TextStylesManager.Body1_Regular_16px.copyWith(
+                            color: ColorsManager.primary,
+                          ),
                         ),
                       ],
                     ),

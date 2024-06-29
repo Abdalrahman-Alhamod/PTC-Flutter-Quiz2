@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
 import '../../../domain/entities/product.dart';
@@ -61,7 +62,12 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: SizesManager.p20),
+      padding: const EdgeInsets.fromLTRB(
+        SizesManager.p20,
+        0,
+        SizesManager.p20,
+        SizesManager.p20,
+      ),
       sliver: SliverGrid.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
@@ -79,35 +85,40 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
             ),
           ),
           padding: const EdgeInsets.all(SizesManager.p18),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Image.asset(
-                  _product[index].image,
-                  height: SizesManager.s80,
-                  fit: BoxFit.cover,
+          child: GestureDetector(
+            onTap: () => GoRouter.of(context).pushNamed(
+              AppRoutes.productsDetails.name,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Image.asset(
+                    _product[index].image,
+                    height: SizesManager.s80,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: SizesManager.s6,
-              ),
-              const Align(
-                alignment: Alignment.centerRight,
-                child: AddToCartButton(),
-              ),
-              const Spacer(),
-              Text(
-                '\$${_product[index].price}',
-                style: TextStylesManager.Body2_Semibold_14px,
-              ),
-              Text(
-                '${_product[index].name} | ${_product[index].quantity} ${StringsManager.bundle}',
-                style: TextStylesManager.Label_Regular_12px.copyWith(
-                  color: ColorsManager.blueGreyLight,
+                const SizedBox(
+                  height: SizesManager.s6,
                 ),
-              ),
-            ],
+                const Align(
+                  alignment: Alignment.centerRight,
+                  child: AddToCartButton(),
+                ),
+                const Spacer(),
+                Text(
+                  '\$${_product[index].price}',
+                  style: TextStylesManager.Body2_Semibold_14px,
+                ),
+                Text(
+                  '${_product[index].name} | ${_product[index].quantity} ${StringsManager.bundle}',
+                  style: TextStylesManager.Label_Regular_12px.copyWith(
+                    color: ColorsManager.blueGreyLight,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
