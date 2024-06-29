@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../../core/widgets/back_arrow_icon_button.dart';
+import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
 
 class ProductsAppBarSliver extends StatelessWidget
     implements PreferredSizeWidget {
@@ -17,24 +18,7 @@ class ProductsAppBarSliver extends StatelessWidget
       sliver: SliverToBoxAdapter(
         child: Row(
           children: [
-            IconButton(
-              onPressed: () {
-                GoRouter.of(context).pop();
-              },
-              style: IconButton.styleFrom(
-                backgroundColor: ColorsManager.greyLight,
-              ),
-              constraints: const BoxConstraints(
-                minHeight: SizesManager.s40,
-                minWidth: SizesManager.s40,
-              ),
-              padding: EdgeInsets.zero,
-              iconSize: SizesManager.s18,
-              icon: const Icon(
-                Icons.navigate_before,
-                color: ColorsManager.black,
-              ),
-            ),
+            const BackArrowIconButon(),
             const SizedBox(
               width: SizesManager.s20,
             ),
@@ -57,21 +41,9 @@ class ProductsAppBarSliver extends StatelessWidget
             const SizedBox(
               width: SizesManager.m32,
             ),
-            IconButton(
-              onPressed: () {},
-              icon: Badge.count(
-                count: 3,
-                backgroundColor: ColorsManager.secondary,
-                child: SvgPicture.asset(
-                  SVGsManager.cart,
-                  width: SizesManager.s24,
-                  colorFilter: const ColorFilter.mode(
-                    ColorsManager.black,
-                    BlendMode.srcIn,
-                  ),
-                ),
-              ),
-            )
+            const CartIconButton(
+              color: ColorsManager.black,
+            ),
           ],
         ),
       ),

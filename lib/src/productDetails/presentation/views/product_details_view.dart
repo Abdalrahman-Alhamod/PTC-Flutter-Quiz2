@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/core/utils/imports_manager.dart';
+import '../../../../core/utils/imports_manager.dart';
 
 import 'widgets/action_buttons.dart';
 import 'widgets/introductory_widget.dart';

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/widgets/back_arrow_icon_button.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
-import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
+import '../../../../../core/widgets/back_arrow_icon_button.dart';
 
-class ProductDetailsAppBar extends StatelessWidget {
-  const ProductDetailsAppBar({
+class ShoppingCartAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
+  const ShoppingCartAppBar({
     super.key,
   });
 
@@ -20,15 +20,14 @@ class ProductDetailsAppBar extends StatelessWidget {
             width: SizesManager.s20,
           ),
           Text(
-            StringsManager.orange,
+            '${StringsManager.shoppingCart}(5)',
             style: TextStylesManager.Body1_Regular_16px,
-          ),
-          Spacer(),
-          CartIconButton(
-            color: ColorsManager.black,
           ),
         ],
       ),
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(SizesManager.s100);
 }

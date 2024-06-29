@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'widgets/categories_app_bar_sliver.dart';
 import 'widgets/categories_grid_sliver.dart';
 import 'widgets/categories_list_sliver.dart';

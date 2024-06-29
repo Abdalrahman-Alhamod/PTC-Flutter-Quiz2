@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
 import 'custom_search_bar.dart';
@@ -34,17 +34,7 @@ class HomeSliverAppBar extends StatelessWidget {
                       color: ColorsManager.white,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Badge.count(
-                      count: 3,
-                      backgroundColor: ColorsManager.secondary,
-                      child: SvgPicture.asset(
-                        SVGsManager.cart,
-                        width: SizesManager.s24,
-                      ),
-                    ),
-                  ),
+                  const CartIconButton(),
                 ],
               ),
               const SizedBox(

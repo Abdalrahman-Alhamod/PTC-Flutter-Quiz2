@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/src/products/presentation/views/widgets/filter_categories_list_sliver.dart';
-import 'package:ptc_quiz2/src/products/presentation/views/widgets/products_grid_sliver.dart';
+import 'widgets/filter_categories_list_sliver.dart';
+import 'widgets/products_grid_sliver.dart';
 
 import 'widgets/products_app_bar.dart';
 

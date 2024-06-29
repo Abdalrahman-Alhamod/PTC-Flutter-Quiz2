@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/utils/imports_manager.dart';
 import 'widgets/deals_grid_sliver.dart';
 import 'widgets/home_ads_sliver.dart';

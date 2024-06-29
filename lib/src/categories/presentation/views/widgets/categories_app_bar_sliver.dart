@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
 
 class CategoriesSliverAppBar extends StatelessWidget {
   const CategoriesSliverAppBar({
@@ -44,17 +45,7 @@ class CategoriesSliverAppBar extends StatelessWidget {
                   const SizedBox(
                     width: SizesManager.m32,
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Badge.count(
-                      count: 3,
-                      backgroundColor: ColorsManager.secondary,
-                      child: SvgPicture.asset(
-                        SVGsManager.cart,
-                        width: SizesManager.s24,
-                      ),
-                    ),
-                  ),
+                  const CartIconButton(),
                 ],
               ),
               const SizedBox(

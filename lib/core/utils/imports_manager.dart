@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/src/productDetails/presentation/views/product_details_view.dart';
-import 'package:ptc_quiz2/src/products/presentation/views/products_view.dart';
+import '../../src/productDetails/presentation/views/product_details_view.dart';
+import '../../src/products/presentation/views/products_view.dart';
+import '../../src/shoppingCart/presentation/views/shopping_cart_view.dart';
 import '../helpers/convert_to_material_color.dart';
 import '../../src/home/presentation/views/bottom_nav_bar_view.dart';
 part '../assets/fonts_manager.dart';
