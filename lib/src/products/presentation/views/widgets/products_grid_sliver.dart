@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
-import '../../../domain/entities/product.dart';
-import 'add_to_cart_button.dart';
+import '../../../../home/domain/entities/product.dart';
+import '../../../../home/presentation/views/widgets/add_to_cart_button.dart';
 
-class DealsGridSliver extends StatefulWidget {
-  const DealsGridSliver({
+class ProductsGridSliver extends StatefulWidget {
+  const ProductsGridSliver({
     super.key,
   });
 
   @override
-  State<DealsGridSliver> createState() => _DealsGridSliverState();
+  State<ProductsGridSliver> createState() => _ProductsGridSliverState();
 }
 
-class _DealsGridSliverState extends State<DealsGridSliver> {
+class _ProductsGridSliverState extends State<ProductsGridSliver> {
   late final List<Product> _product;
   @override
   void initState() {
@@ -21,38 +21,62 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
       Product(
         image: ImagesManager.delivery,
         price: 325,
-        name: StringsManager.orangePackage,
-        quantity: 1,
+        name: StringsManager.clownTangH03,
       ),
       Product(
         image: ImagesManager.delivery,
         price: 89,
-        name: StringsManager.greenTeaPackage,
-        quantity: 1,
+        name: StringsManager.clownTangH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 89,
+        name: StringsManager.goldFishH03,
       ),
       Product(
         image: ImagesManager.delivery,
         price: 325,
-        name: StringsManager.orangePackage,
-        quantity: 1,
+        name: StringsManager.fishH03,
       ),
       Product(
         image: ImagesManager.delivery,
         price: 89,
-        name: StringsManager.greenTeaPackage,
-        quantity: 1,
+        name: StringsManager.clownfishH03,
       ),
       Product(
         image: ImagesManager.delivery,
         price: 325,
-        name: StringsManager.orangePackage,
-        quantity: 1,
+        name: StringsManager.clownTangH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 325,
+        name: StringsManager.clownTangH03,
       ),
       Product(
         image: ImagesManager.delivery,
         price: 89,
-        name: StringsManager.greenTeaPackage,
-        quantity: 1,
+        name: StringsManager.clownTangH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 89,
+        name: StringsManager.goldFishH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 325,
+        name: StringsManager.fishH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 89,
+        name: StringsManager.clownfishH03,
+      ),
+      Product(
+        image: ImagesManager.delivery,
+        price: 325,
+        name: StringsManager.clownTangH03,
       ),
     ];
     super.initState();
@@ -61,13 +85,18 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: SizesManager.p20),
+      padding: const EdgeInsets.fromLTRB(
+        SizesManager.m20,
+        0,
+        SizesManager.m20,
+        SizesManager.m20,
+      ),
       sliver: SliverGrid.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 165 / 200,
-          crossAxisSpacing: SizesManager.m12,
-          mainAxisSpacing: SizesManager.m12,
+          crossAxisSpacing: SizesManager.m16,
+          mainAxisSpacing: SizesManager.m24,
         ),
         itemCount: _product.length,
         itemBuilder: (context, index) => Container(
@@ -102,7 +131,7 @@ class _DealsGridSliverState extends State<DealsGridSliver> {
                 style: TextStylesManager.Body2_Semibold_14px,
               ),
               Text(
-                '${_product[index].name} | ${_product[index].quantity} ${StringsManager.bundle}',
+                _product[index].name,
                 style: TextStylesManager.Label_Regular_12px.copyWith(
                   color: ColorsManager.blueGreyLight,
                 ),
