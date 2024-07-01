@@ -7,7 +7,7 @@ enum AppRoutes {
   productsDetails,
   shoppingCart,
   checkout,
-  addNewCard,
+  addCard,
   orders,
 }
 
@@ -22,6 +22,7 @@ final Map<AppRoutes, dynamic> routes = {
   },
   AppRoutes.shoppingCart: (context, state) => const ShoppingCartView(),
   AppRoutes.checkout: (context, state) => const CheckoutView(),
+  AppRoutes.addCard: (context, state) => const AddCardView(),
 };
 
 abstract final class RoutesManager {

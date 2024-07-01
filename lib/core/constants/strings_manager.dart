@@ -94,11 +94,14 @@ abstract final class StringsManager {
   static const addCard = 'Add Card';
 
   // Add Card
-  static const cardHolderName = 'Card holder name';
+  static const cardHolderName = 'CARD HOLDER NAME';
   static const johnSmith = 'John Smith';
-  static const cardNumber = 'Card Number';
+  static const cardNumber = 'CARD NUMBER';
+  static const cardNumberValue = '0987 0986 5543 0980';
   static const expDate = 'Exp Date';
-  static const cVc = 'CVc';
+  static const expDateValue = '10/23';
+  static const cVc = 'CVC';
+  static const cVcValue = '3465';
   static const makePayment = 'Make Payment';
   static const checkout = 'Checkout';
 

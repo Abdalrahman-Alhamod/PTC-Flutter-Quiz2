@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:ptc_quiz2/core/utils/imports_manager.dart';
 import 'package:ptc_quiz2/core/widgets/custome_filled_elevated_button.dart';
 import 'package:ptc_quiz2/src/checkout/presentation/views/widgets/checkout_app_bar.dart';
@@ -31,7 +32,9 @@ class CheckoutView extends StatelessWidget {
             const DeliveryAddressesListView(),
             CustomFilledElevatedButton(
               title: StringsManager.addCard,
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).pushNamed(AppRoutes.addCard.name);
+              },
             ),
           ],
         ),

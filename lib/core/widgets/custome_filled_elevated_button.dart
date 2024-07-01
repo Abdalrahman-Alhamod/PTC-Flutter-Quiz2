@@ -9,7 +9,7 @@ class CustomFilledElevatedButton extends StatelessWidget {
     required this.onPressed,
   });
   final String title;
-  final void Function() onPressed;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(

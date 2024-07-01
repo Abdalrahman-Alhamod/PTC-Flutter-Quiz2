@@ -109,6 +109,10 @@ abstract final class TextStylesManager {
   );
 
   ///   Label
+  static const Label_Semibold_12px = TextStyle(
+    fontSize: FontSizeManager.s12,
+    fontWeight: FontWeightManager.semiBold,
+  );
   static const Label_Medium_12px = TextStyle(
     fontSize: FontSizeManager.s12,
     fontWeight: FontWeightManager.medium,
