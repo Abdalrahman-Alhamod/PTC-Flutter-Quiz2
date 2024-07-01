@@ -8,6 +8,10 @@ class OnboardingPageImage extends StatelessWidget {
   final String path;
   @override
   Widget build(BuildContext context) {
-    return Image.asset(path);
+    return CircleAvatar(
+      backgroundImage: AssetImage(
+        path,
+      ),
+    );
   }
 }

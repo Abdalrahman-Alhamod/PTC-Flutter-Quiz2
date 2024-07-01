@@ -11,6 +11,9 @@ abstract final class ImagesManager {
   static const home = '$mainPath/home.png';
   static const homeActive = '$mainPath/home_active.png';
   static const more = '$mainPath/more.png';
+  static const onboarding1 = '$mainPath/onboarding1.png';
+  static const onboarding2 = '$mainPath/onboarding2.png';
+  static const onboarding3 = '$mainPath/onboarding3.png';
 
   // Test
   static const String mainTestPath = 'assets/images/test/';

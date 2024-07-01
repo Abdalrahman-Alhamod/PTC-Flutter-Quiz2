@@ -23,8 +23,8 @@ class _BottomNavBarViewState extends State<BottomNavBarView> {
     _pages = const [
       HomeView(),
       CategoriesView(),
-      HomeView(),
-      HomeView(),
+      SizedBox(),
+      SizedBox(),
     ];
     _icons = [
       ImagesManager.home,

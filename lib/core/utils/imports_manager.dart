@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ptc_quiz2/src/home/domain/entities/home_brief.dart';
 import 'package:ptc_quiz2/src/onboarding/presentation/views/onboarding_view.dart';
 import '../../src/categories/domain/entities/category.dart';
 import '../../src/home/domain/entities/ads.dart';

@@ -59,7 +59,8 @@ class _OnboardingViewState extends State<OnboardingView> {
             ),
             OnboardingPageIndicator(controller: _pageController),
             const Spacer(),
-            Flexible(
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .5,
               child: PageView(
                 controller: _pageController,
                 onPageChanged: (value) {
@@ -69,13 +70,13 @@ class _OnboardingViewState extends State<OnboardingView> {
                 },
                 children: const [
                   OnboardingPageImage(
-                    path: ImagesManager.image,
+                    path: ImagesManager.onboarding1,
                   ),
                   OnboardingPageImage(
-                    path: ImagesManager.image,
+                    path: ImagesManager.onboarding2,
                   ),
                   OnboardingPageImage(
-                    path: ImagesManager.image,
+                    path: ImagesManager.onboarding3,
                   ),
                 ],
               ),

@@ -399,4 +399,17 @@ class FakeDataManager {
   }
 
   static const double deliveryPrice = 2.0;
+
+  static final List<HomeBrief> homeBriefs = [
+    HomeBrief(
+      number: 346,
+      unit: StringsManager.usd,
+      description: StringsManager.yourTotalSavings,
+    ),
+    HomeBrief(
+      number: 215,
+      unit: StringsManager.hrs,
+      description: StringsManager.yourTimeSaved,
+    ),
+  ];
 }
