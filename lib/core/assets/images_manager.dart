@@ -46,4 +46,5 @@ abstract final class ImagesManager {
   static const String bakery = '${mainTestPath}bakery.png';
   static const String beverages = '${mainTestPath}beverages.png';
   static const String snacks = '${mainTestPath}snacks.png';
+  static const String riderAbd = '${mainTestPath}abd.png';
 }

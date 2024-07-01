@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/utils/imports_manager.dart';
 import 'deals_product_card.dart';
 

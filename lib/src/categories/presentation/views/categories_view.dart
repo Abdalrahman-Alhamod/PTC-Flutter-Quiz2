@@ -21,7 +21,7 @@ class _CategoriesViewState extends State<CategoriesView> {
           CategoriesSliverAppBar(),
           CategoriesGridSliver(),
           CategoriesListSliver(),
-          CategoriesProductsListTile(),
+          CategoriesProductsListSliver(),
         ],
       ),
     );

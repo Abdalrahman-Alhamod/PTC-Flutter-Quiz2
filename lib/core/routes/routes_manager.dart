@@ -23,6 +23,7 @@ final Map<AppRoutes, dynamic> routes = {
   AppRoutes.shoppingCart: (context, state) => const ShoppingCartView(),
   AppRoutes.checkout: (context, state) => const CheckoutView(),
   AppRoutes.addCard: (context, state) => const AddCardView(),
+  AppRoutes.orders: (context, state) => const OrdersView(),
 };
 
 abstract final class RoutesManager {

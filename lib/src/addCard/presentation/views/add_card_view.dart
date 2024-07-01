@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ptc_quiz2/src/addCard/presentation/views/widgets/add_card_app_bar.dart';
-import 'package:ptc_quiz2/src/addCard/presentation/views/widgets/card_bottom_sheet.dart';
+import 'widgets/add_card_app_bar.dart';
+import 'widgets/card_bottom_sheet.dart';
 
 import '../../../../core/utils/imports_manager.dart';
 import 'widgets/credit_card_form.dart';

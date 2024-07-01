@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../shoppingCart/presentation/views/widgets/cart_icon_button.dart';
 import 'custom_search_bar.dart';
 import 'sliver_app_bar_sub_widget.dart';
 

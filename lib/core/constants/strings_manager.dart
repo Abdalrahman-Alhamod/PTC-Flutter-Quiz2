@@ -108,11 +108,11 @@ abstract final class StringsManager {
   // Orders
   static const orders = 'Orders';
   static const id = 'ID';
-  static const yourOranges = 'Your Oranges';
+  static const your = 'Your';
   static const areOnTheWay = 'are on the way';
   static const trackOrder = 'Track Order';
   static const meetOurRider = 'Meet our rider, ';
-  static const rakib = 'Rakib';
+  static const abd = 'Abd';
   static const success = 'Success';
   static const apple = 'Apple';
   static const current = 'Current';

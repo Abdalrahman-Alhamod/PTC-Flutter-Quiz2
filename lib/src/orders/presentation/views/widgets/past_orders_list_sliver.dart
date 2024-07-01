@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
-import 'category_list_tile.dart';
+import 'order_list_tile.dart';
 
-class CategoriesProductsListSliver extends StatelessWidget {
-  const CategoriesProductsListSliver({
+class PastOrdersListSliver extends StatelessWidget {
+  const PastOrdersListSliver({
     super.key,
   });
 
@@ -18,14 +18,13 @@ class CategoriesProductsListSliver extends StatelessWidget {
         SizesManager.m18,
       ),
       sliver: SliverList.separated(
-        itemCount: FakeDataManager.filteredCategoies.length,
+        itemCount: FakeDataManager.pastOrders.length,
         separatorBuilder: (context, index) => const SizedBox(
           height: SizesManager.m30,
         ),
         itemBuilder: (context, index) {
-          return CategoryListTile(
-            category: FakeDataManager.filteredCategoies[index],
-            index: index,
+          return OrderListTile(
+            order: FakeDataManager.pastOrders[index],
           );
         },
       ),

@@ -427,4 +427,65 @@ class FakeDataManager {
       description: StringsManager.friendsHouseDescription,
     ),
   ];
+
+  static final List<String> filterOrders = [
+    StringsManager.current,
+    StringsManager.past,
+  ];
+  
+  static final List<Order> pastOrders = [
+    Order(
+      productImage: ImagesManager.bananas,
+      productName: StringsManager.bananas,
+      productPrice: 7.49,
+      id: 756433,
+      isDelivered: true,
+      deliveryDate: DateTime.now(),
+    ),
+    Order(
+      productImage: ImagesManager.orange,
+      productName: StringsManager.orange,
+      productPrice: 13.29,
+      id: 756733,
+      isDelivered: true,
+      deliveryDate: DateTime.now(),
+    ),
+    Order(
+      productImage: ImagesManager.apple,
+      productName: StringsManager.apple,
+      productPrice: 17.19,
+      id: 756233,
+      isDelivered: true,
+      deliveryDate: DateTime.now(),
+    ),
+  ];
+  static final List<Order> currentOrders = [
+    Order(
+      productImage: ImagesManager.bananas,
+      productName: StringsManager.bananas,
+      productPrice: 7.49,
+      id: 756433,
+      isDelivered: false,
+      riderImage: ImagesManager.riderAbd,
+      riderName: StringsManager.abd,
+    ),
+    Order(
+      productImage: ImagesManager.orange,
+      productName: StringsManager.orange,
+      productPrice: 13.29,
+      id: 756733,
+      isDelivered: false,
+      riderImage: ImagesManager.riderAbd,
+      riderName: StringsManager.abd,
+    ),
+    Order(
+      productImage: ImagesManager.apple,
+      productName: StringsManager.apple,
+      productPrice: 17.19,
+      id: 756233,
+      isDelivered: false,
+      riderImage: ImagesManager.riderAbd,
+      riderName: StringsManager.abd,
+    ),
+  ];
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ptc_quiz2/src/categories/domain/entities/category.dart';
+import '../../../domain/entities/category.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
 

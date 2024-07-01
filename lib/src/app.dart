@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ptc_quiz2/src/shoppingCart/presentation/manager/cart_provider.dart';
+import 'shoppingCart/presentation/manager/cart_provider.dart';
 
 import '../core/utils/imports_manager.dart';
 
