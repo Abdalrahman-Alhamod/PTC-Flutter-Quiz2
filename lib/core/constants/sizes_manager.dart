@@ -71,6 +71,7 @@ abstract final class SizesManager {
   static const double s70 = 70.0;
   static const double s80 = 80.0;
   static const double s100 = 100.0;
+  static const double s120 = 120.0;
 
   // Radius
   static const double r4 = 4.0;

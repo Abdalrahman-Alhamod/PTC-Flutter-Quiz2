@@ -90,9 +90,6 @@ abstract final class StringsManager {
   static const total = 'Total';
   static const proceedToCheckout = 'Proceed  To checkout';
   static const deliveryAddress = 'Delivery Address';
-  static const greenWaySunamganj = '36 green way, Sunamganj';
-  static const office = 'Office';
-  static const medicalRoadHalallab = 'Medical road, Halal lab, Sunamganj';
   static const addNewAddress = 'Add New Address';
   static const addCard = 'Add Card';
 
@@ -103,6 +100,7 @@ abstract final class StringsManager {
   static const expDate = 'Exp Date';
   static const cVc = 'CVc';
   static const makePayment = 'Make Payment';
+  static const checkout = 'Checkout';
 
   // Orders
   static const orders = 'Orders';
@@ -153,4 +151,17 @@ abstract final class StringsManager {
   static const String snacks = 'Snacks';
   static const String refreshing = 'Refreshing';
   static const String delicious = 'Delicious';
+
+  //
+  static const String homeAddressTitle = 'Home';
+  static const String homeAddressDescription =
+      '123 Main Street, Springfield, IL 62701';
+
+  static const String officeAddressTitle = 'Office';
+  static const String officeAddressDescription =
+      '456 Elm Street, Suite 789, Springfield, IL 62702';
+
+  static const String friendsHouseTitle = "Friend's House";
+  static const String friendsHouseDescription =
+      '789 Oak Avenue, Springfield, IL 62703';
 }

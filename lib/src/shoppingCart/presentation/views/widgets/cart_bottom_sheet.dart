@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../../core/widgets/custome_filled_elevated_button.dart';
 import '../../manager/cart_provider.dart';
 
 class CartBottomSheet extends StatelessWidget {
@@ -96,28 +98,12 @@ class CartBottomSheet extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: const Size(
-                  double.infinity,
-                  70,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    SizesManager.r20,
-                  ),
-                ),
-                backgroundColor: ColorsManager.primary,
-                foregroundColor: ColorsManager.white,
-              ),
-              onPressed: () {},
-              child: Text(
-                StringsManager.proceedToCheckout,
-                style: TextStylesManager.Body2_Semibold_14px.copyWith(
-                  color: ColorsManager.white,
-                ),
-              ),
-            )
+            CustomFilledElevatedButton(
+              title: StringsManager.proceedToCheckout,
+              onPressed: () {
+                GoRouter.of(context).pushNamed(AppRoutes.checkout.name);
+              },
+            ),
           ],
         ),
       ),

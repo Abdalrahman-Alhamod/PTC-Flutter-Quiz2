@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../../../core/utils/imports_manager.dart';
 import '../manager/cart_provider.dart';
 import 'widgets/cart_bottom_sheet.dart';
+import 'widgets/cart_edit_button.dart';
 import 'widgets/cart_product_list_tile.dart';
 import 'widgets/shopping_cart_app_bar.dart';
 
@@ -35,25 +36,6 @@ class ShoppingCartView extends StatelessWidget {
         ),
       ),
       bottomSheet: const CartBottomSheet(),
-    );
-  }
-}
-
-class CartEditButton extends StatelessWidget {
-  const CartEditButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: TextButton(
-        onPressed: () {},
-        child: const Text(
-          StringsManager.edit,
-        ),
-      ),
     );
   }
 }

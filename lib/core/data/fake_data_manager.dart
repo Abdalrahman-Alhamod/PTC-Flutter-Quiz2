@@ -412,4 +412,19 @@ class FakeDataManager {
       description: StringsManager.yourTimeSaved,
     ),
   ];
+
+  static final List<DeliveryAddress> deliveryAddresses = [
+    DeliveryAddress(
+      title: StringsManager.homeAddressTitle,
+      description: StringsManager.homeAddressDescription,
+    ),
+    DeliveryAddress(
+      title: StringsManager.officeAddressTitle,
+      description: StringsManager.officeAddressDescription,
+    ),
+    DeliveryAddress(
+      title: StringsManager.friendsHouseTitle,
+      description: StringsManager.friendsHouseDescription,
+    ),
+  ];
 }
