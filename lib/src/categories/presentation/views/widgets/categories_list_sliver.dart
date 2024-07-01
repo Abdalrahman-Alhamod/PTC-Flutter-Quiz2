@@ -14,16 +14,9 @@ class CategoriesListSliver extends StatefulWidget {
 
 class _CategoriesListSliverState extends State<CategoriesListSliver> {
   late int _currentIndex;
-  late final List<String> _categories;
   @override
   void initState() {
     _currentIndex = 0;
-    _categories = [
-      StringsManager.meatsFishes,
-      StringsManager.vegetables,
-      StringsManager.fruits,
-      StringsManager.fishes,
-    ];
     super.initState();
   }
 
@@ -42,19 +35,18 @@ class _CategoriesListSliverState extends State<CategoriesListSliver> {
             maxHeight: 36,
           ),
           child: ListView.builder(
-            itemCount: _categories.length,
+            itemCount: FakeDataManager.categoriesNames.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return CategoryBox(
-                title: _categories[index],
-                index: index,
+                title: FakeDataManager.categoriesNames[index],
                 onTap: () {
                   setState(() {
                     _currentIndex = index;
                   });
                 },
                 isSelected: _currentIndex == index,
-                listLength: _categories.length,
+                isLast: index == FakeDataManager.categoriesNames.length - 1,
               );
             },
           ),

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ptc_quiz2/src/categories/domain/entities/category.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
-import '../../../../home/domain/entities/product.dart';
 
 class CategoryListTile extends StatelessWidget {
   const CategoryListTile({
     super.key,
-    required this.product,
+    required this.category,
     required this.index,
   });
-  final Product product;
+  final ProductCategory category;
   final int index;
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CategoryListTile extends StatelessWidget {
               padding: const EdgeInsets.all(SizesManager.p8),
               child: Center(
                 child: Image.asset(
-                  product.image,
+                  category.image,
                 ),
               ),
             ),
@@ -46,14 +46,14 @@ class CategoryListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    product.name,
+                    category.name,
                     style: TextStylesManager.H4_Bold_18px,
                   ),
                   const SizedBox(
                     height: SizesManager.s10,
                   ),
                   Text(
-                    product.description ?? ' ',
+                    category.description,
                     style: TextStylesManager.Body1_Regular_16px.copyWith(
                         color: ColorsManager.greyDark),
                   ),
@@ -71,7 +71,7 @@ class CategoryListTile extends StatelessWidget {
                     TextSpan(
                       children: [
                         TextSpan(
-                          text: '\$${product.price}',
+                          text: '\$${category.startingFromPrice}',
                           style: TextStylesManager.Body1_Bold_16px.copyWith(
                             color: ColorsManager.primary,
                           ),

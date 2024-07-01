@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:ptc_quiz2/src/shoppingCart/presentation/manager/cart_provider.dart';
 
 import '../core/utils/imports_manager.dart';
 
@@ -7,11 +9,14 @@ class PTCQuiz2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: StringsManager.appName,
-      routerConfig: RoutesManager.goRouterConfig,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeManager.appTheme,
+    return ChangeNotifierProvider<CartProvider>(
+      create: (context) => CartProvider(),
+      child: MaterialApp.router(
+        title: StringsManager.appName,
+        routerConfig: RoutesManager.goRouterConfig,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeManager.appTheme,
+      ),
     );
   }
 }

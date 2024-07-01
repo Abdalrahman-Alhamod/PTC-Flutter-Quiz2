@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/utils/imports_manager.dart';
+import '../manager/cart_provider.dart';
 import 'widgets/cart_bottom_sheet.dart';
 import 'widgets/cart_product_list_tile.dart';
 import 'widgets/shopping_cart_app_bar.dart';
@@ -10,7 +12,8 @@ class ShoppingCartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int length = 3;
+    final cart = Provider.of<CartProvider>(context);
+
     return Scaffold(
       appBar: const ShoppingCartAppBar(),
       body: Padding(
@@ -18,13 +21,17 @@ class ShoppingCartView extends StatelessWidget {
           SizesManager.m24,
           SizesManager.m24,
           SizesManager.m24,
-          240,
+          250,
         ),
         child: ListView.builder(
-          itemCount: length + 1,
-          itemBuilder: (context, index) => index == length
-              ? const CartEditButton()
-              : const CartProductListTile(),
+          itemCount: cart.itemCount + 1,
+          itemBuilder: (context, index) => index == cart.itemCount
+              ? cart.itemCount != 0
+                  ? const CartEditButton()
+                  : Container()
+              : CartProductListTile(
+                  product: cart.items.values.toList()[index],
+                ),
         ),
       ),
       bottomSheet: const CartBottomSheet(),

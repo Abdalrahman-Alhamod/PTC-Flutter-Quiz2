@@ -1,45 +1,33 @@
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
 import '../../../../../core/widgets/rounder_icon_button.dart';
+import '../../../../home/domain/entities/product.dart';
+import '../../manager/cart_provider.dart';
 
-class CartProductCounter extends StatefulWidget {
+class CartProductCounter extends StatelessWidget {
   const CartProductCounter({
     super.key,
+    required this.product,
   });
-
-  @override
-  State<CartProductCounter> createState() => _CartProductCounterState();
-}
-
-class _CartProductCounterState extends State<CartProductCounter> {
-  late int _count;
-  @override
-  void initState() {
-    _count = 2;
-    super.initState();
-  }
-
+  final Product product;
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
     return Row(
       children: [
         RounderdconButton(
           icon: Icons.remove,
           onPressed: () {
-            setState(() {
-              if (_count > 1) {
-                _count--;
-              }
-            });
+            cart.decreaseQuantity(product);
           },
         ),
         const SizedBox(
           width: SizesManager.s10,
         ),
         Text(
-          _count.toString(),
+          product.quantity.toString(),
           style: TextStylesManager.Body2_Medium_14px,
         ),
         const SizedBox(
@@ -48,9 +36,7 @@ class _CartProductCounterState extends State<CartProductCounter> {
         RounderdconButton(
           icon: Icons.add,
           onPressed: () {
-            setState(() {
-              _count++;
-            });
+            cart.increaseQuantity(product);
           },
         ),
       ],

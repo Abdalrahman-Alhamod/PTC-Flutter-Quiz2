@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../home/domain/entities/product.dart';
 import 'product_image_viewer_indicator.dart';
 
 class ProductImageView extends StatefulWidget {
-  const ProductImageView({super.key});
-
+  const ProductImageView({super.key,required this.product});
+final Product product;
   @override
   State<ProductImageView> createState() => _ProductImageViewState();
 }
@@ -35,9 +36,9 @@ class _ProductImageViewState extends State<ProductImageView> {
             child: PageView(
               controller: _pageController,
               children: [
-                Image.asset(ImagesManager.delivery),
-                Image.asset(ImagesManager.delivery),
-                Image.asset(ImagesManager.delivery),
+                Image.asset(widget.product.image),
+                Image.asset(widget.product.image),
+                Image.asset(widget.product.image),
               ],
             ),
           ),

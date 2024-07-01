@@ -25,14 +25,15 @@ abstract final class StringsManager {
   static const unit = 'Unit';
   static const get = 'Get';
   static const off = 'OFF';
-  static const onFirstOrder = 'On first 03 order';
+  static const onFirst = 'On first';
+  static const orderAds = 'orders';
   static const usd = 'USD';
   static const yourTotalSavings = 'Your total savings';
   static const hrs = 'HRS';
   static const yourTimeSaved = 'Your time saved';
   static const dealsOnFruitsTea = 'Deals on Fruits & Tea';
-  static const orangePackage = 'Orange Package 1';
-  static const greenTeaPackage = 'Green Tea Package 1';
+  static const orangePackage = 'Orange Package 1 | 1 bundle';
+  static const greenTeaPackage = 'Green Tea Package 1 | 1 bundle';
   static const bundle = 'bundle';
 
   // Categories
@@ -123,4 +124,33 @@ abstract final class StringsManager {
   static const favourite = 'Favourite';
   static const categories = 'Categories';
   static const home = 'Home';
+
+  // Test
+  static const String oranges = 'Oranges';
+  static const String apples = 'Apples';
+  static const String strawberries = 'Strawberries';
+  static const String grapes = 'Grapes';
+  static const String blueberries = 'Blueberries';
+  static const String citrus = 'Citrus';
+  static const String sweet = 'Sweet';
+  static const String juicy = 'Juicy';
+  static const String crisp = 'Crisp';
+  static const String fresh = 'Fresh';
+  static const String clownTang = 'Clown Tang';
+  static const String goldFish = 'Gold Fish';
+  static const String bettaFish = 'Betta Fish';
+  static const String angelfish = 'Angelfish';
+  static const String cichlid = 'Cichlid';
+  static const String catfish = 'Catfish';
+  static const String orangePackageBundle = 'Orange Package 1 | 1 Bundle';
+  static const String greenTeaBundle = 'Green Tea 1 | 1 Bundle';
+  static const String applePackageBundle = 'Apple Package 1 | 1 Bundle';
+  static const String mixedFruitsBundle = 'Mixed Fruits 1 | 1 Bundle';
+  static const String vegetableBundle = 'Vegetable Package 1 | 1 Bundle';
+  static const String dairy = 'Dairy';
+  static const String bakery = 'Bakery';
+  static const String beverages = 'Beverages';
+  static const String snacks = 'Snacks';
+  static const String refreshing = 'Refreshing';
+  static const String delicious = 'Delicious';
 }

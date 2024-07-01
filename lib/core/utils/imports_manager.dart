@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ptc_quiz2/src/onboarding/presentation/views/onboarding_view.dart';
+import '../../src/categories/domain/entities/category.dart';
+import '../../src/home/domain/entities/ads.dart';
+import '../../src/home/domain/entities/product.dart';
 import '../../src/productDetails/presentation/views/product_details_view.dart';
 import '../../src/products/presentation/views/products_view.dart';
 import '../../src/shoppingCart/presentation/views/shopping_cart_view.dart';
@@ -16,3 +20,4 @@ part '../styles/font_sizes_manager.dart';
 part '../styles/font_weight_manager.dart';
 part '../styles/text_styles_manager.dart';
 part '../theme/theme_manager.dart';
+part '../data/fake_data_manager.dart';

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import 'ads_box.dart';
 
 class HomeAdsSliver extends StatefulWidget {
   const HomeAdsSliver({
@@ -73,61 +74,14 @@ class _HomeAdsSliverState extends State<HomeAdsSliver> {
           ),
           child: ListView.builder(
             controller: _scrollController,
-            itemCount: 3,
+            itemCount: FakeDataManager.adsList.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               final bool isCurrent = index == _currentIndex;
-              return Container(
-                margin: index != 2
-                    ? const EdgeInsets.only(left: SizesManager.m20)
-                    : const EdgeInsets.symmetric(horizontal: SizesManager.m20),
-                width: 270,
-                decoration: BoxDecoration(
-                  color:
-                      isCurrent ? ColorsManager.secondary : ColorsManager.grey,
-                  borderRadius: BorderRadius.circular(
-                    SizesManager.r20,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: SizesManager.m20,
-                        vertical: SizesManager.m26,
-                      ),
-                      child: Image.asset(
-                        ImagesManager.image,
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          StringsManager.get,
-                          style: TextStylesManager.H3_Regular_20px.copyWith(
-                            color: ColorsManager.white,
-                            fontWeight: FontWeightManager.light,
-                          ),
-                        ),
-                        Text(
-                          '50% ${StringsManager.off}',
-                          style: TextStylesManager.H2_Bold_26px.copyWith(
-                            color: ColorsManager.white,
-                          ),
-                        ),
-                        Text(
-                          StringsManager.onFirstOrder,
-                          style: TextStylesManager.Label_Regular_12px.copyWith(
-                            color: ColorsManager.white,
-                            fontWeight: FontWeightManager.light,
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+              return AdsBox(
+                isCurrent: isCurrent,
+                isLast: index == 2,
+                ads: FakeDataManager.adsList[index],
               );
             },
           ),

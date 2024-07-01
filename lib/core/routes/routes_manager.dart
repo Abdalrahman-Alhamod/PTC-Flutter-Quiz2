@@ -14,7 +14,12 @@ enum AppRoutes {
 final Map<AppRoutes, dynamic> routes = {
   AppRoutes.bottomBar: (context, state) => const BottomNavBarView(),
   AppRoutes.products: (context, state) => const ProductsView(),
-  AppRoutes.productsDetails: (context, state) => const ProductDetailsView(),
+  AppRoutes.productsDetails: (context, state) {
+    final product = state.extra as Product;
+    return ProductDetailsView(
+      product: product,
+    );
+  },
   AppRoutes.shoppingCart: (context, state) => const ShoppingCartView(),
 };
 
@@ -27,7 +32,7 @@ abstract final class RoutesManager {
       GoRoute(
         path: '/',
         name: AppRoutes.onboarding.name,
-        builder: (context, state) => const BottomNavBarView(),
+        builder: (context, state) => const OnboardingView(),
         routes: routes.entries
             .map(
               (entry) => GoRoute(

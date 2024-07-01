@@ -6,22 +6,20 @@ class CategoryBox extends StatelessWidget {
   const CategoryBox({
     super.key,
     required this.title,
-    required this.index,
     required this.onTap,
     required this.isSelected,
-    required this.listLength,
+    required this.isLast,
   });
   final String title;
-  final int index;
   final void Function() onTap;
   final bool isSelected;
-  final int listLength;
+  final bool isLast;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: index != listLength - 1
+        margin: !isLast
             ? const EdgeInsets.only(left: SizesManager.m20)
             : const EdgeInsets.symmetric(
                 horizontal: SizesManager.m20,

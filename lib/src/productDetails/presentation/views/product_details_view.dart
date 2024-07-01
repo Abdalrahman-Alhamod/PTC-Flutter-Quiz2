@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../core/utils/imports_manager.dart';
 
+import '../../../home/domain/entities/product.dart';
 import 'widgets/action_buttons.dart';
 import 'widgets/introductory_widget.dart';
 import 'widgets/price_bar.dart';
@@ -9,16 +10,20 @@ import 'widgets/product_image_view.dart';
 import 'widgets/reviews_bar.dart';
 
 class ProductDetailsView extends StatelessWidget {
-  const ProductDetailsView({super.key});
-
+  const ProductDetailsView({super.key, required this.product});
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const ProductDetailsAppBar(),
-          const ProductImageView(),
+          ProductDetailsAppBar(
+            product: product,
+          ),
+          ProductImageView(
+            product: product,
+          ),
           const SizedBox(
             height: SizesManager.s20,
           ),
@@ -40,14 +45,16 @@ class ProductDetailsView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const Text(
-                      StringsManager.thinChoiseTopOrange,
+                    Text(
+                      product.name,
                       style: TextStylesManager.H3_Semibold_20px,
                     ),
                     const SizedBox(
                       height: SizesManager.s12,
                     ),
-                    const PriceBar(),
+                    PriceBar(
+                      product: product,
+                    ),
                     const SizedBox(
                       height: SizesManager.s24,
                     ),

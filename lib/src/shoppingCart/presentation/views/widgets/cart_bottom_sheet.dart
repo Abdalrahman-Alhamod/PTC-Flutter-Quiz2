@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../manager/cart_provider.dart';
 
 class CartBottomSheet extends StatelessWidget {
   const CartBottomSheet({
@@ -9,6 +12,8 @@ class CartBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
+    final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: SizesManager.m8,
@@ -64,25 +69,26 @@ class CartBottomSheet extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      '\$35.96',
+                      currencyFormat.format(cart.totalAmount),
                       style: TextStylesManager.Body2_Semibold_14px,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: SizesManager.s12,
                     ),
                     Text(
-                      '\$2.0',
+                      currencyFormat.format(FakeDataManager.deliveryPrice),
                       style: TextStylesManager.Body2_Semibold_14px,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: SizesManager.s16,
                     ),
                     Text(
-                      '\$37.96',
+                      currencyFormat.format(
+                          cart.totalAmount + FakeDataManager.deliveryPrice),
                       style: TextStylesManager.Body2_Semibold_14px,
                     ),
                   ],

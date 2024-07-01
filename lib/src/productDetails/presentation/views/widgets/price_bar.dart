@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../home/domain/entities/product.dart';
 
 class PriceBar extends StatelessWidget {
   const PriceBar({
     super.key,
+    required this.product,
   });
-
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -15,7 +17,7 @@ class PriceBar extends StatelessWidget {
           TextSpan(
             children: [
               TextSpan(
-                text: '\$35',
+                text: '\$${product.price}',
                 style: TextStylesManager.Body1_Bold_16px.copyWith(
                   color: ColorsManager.primary,
                 ),

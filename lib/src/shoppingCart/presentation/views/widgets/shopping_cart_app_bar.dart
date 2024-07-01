@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
 import '../../../../../core/widgets/back_arrow_icon_button.dart';
+import '../../manager/cart_provider.dart';
 
 class ShoppingCartAppBar extends StatelessWidget
     implements PreferredSizeWidget {
@@ -11,16 +13,17 @@ class ShoppingCartAppBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(SizesManager.m24),
+    final cart = Provider.of<CartProvider>(context);
+    return Padding(
+      padding: const EdgeInsets.all(SizesManager.m24),
       child: Row(
         children: [
-          BackArrowIconButon(),
-          SizedBox(
+          const BackArrowIconButon(),
+          const SizedBox(
             width: SizesManager.s20,
           ),
           Text(
-            '${StringsManager.shoppingCart}(5)',
+            '${StringsManager.shoppingCart}(${cart.itemCount})',
             style: TextStylesManager.Body1_Regular_16px,
           ),
         ],

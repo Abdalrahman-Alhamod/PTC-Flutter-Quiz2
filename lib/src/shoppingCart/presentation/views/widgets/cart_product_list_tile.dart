@@ -1,13 +1,16 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/imports_manager.dart';
+import '../../../../home/domain/entities/product.dart';
 import 'cart_product_counter.dart';
 
 class CartProductListTile extends StatelessWidget {
   const CartProductListTile({
     super.key,
+    required this.product,
   });
-
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,33 +22,43 @@ class CartProductListTile extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset(
-                  ImagesManager.delivery,
-                  width: 100,
-                  height: 100,
+                  product.image,
+                  width: 80,
+                  height: 80,
                 ),
-                const Column(
+                const SizedBox(
+                  width: SizesManager.m20,
+                ),
+                Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Spacer(
+                    const Spacer(
                       flex: 3,
                     ),
-                    Text(
-                      StringsManager.bananas,
-                      style: TextStylesManager.Body2_Medium_14px,
+                    SizedBox(
+                      width: 130,
+                      child: AutoSizeText(
+                        product.name,
+                        maxLines: 2,
+                        style: TextStylesManager.Body2_Medium_14px,
+                      ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
-                      '\$36.06',
+                      '\$${product.price}',
                       style: TextStylesManager.Body2_Regular_14px,
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 3,
                     ),
                   ],
                 ),
                 const Spacer(),
-                const CartProductCounter(),
+                CartProductCounter(
+                  product: product,
+                ),
               ],
             ),
           ),
